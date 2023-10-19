@@ -21,28 +21,49 @@ namespace ExceptionHandlingExercise
 
 
             //TODO START HERE:
-            
+
+            var arr = new char[] {'7', 'y', '0', '2', 'b', 'q' };
+            var numbers = new List<int>();
+            string str = "";
+
+
             // Make a foreach loop to iterate through your character array
-            
+            foreach (var character in arr)
+            {
                 // Now create a try catch
-                
-                
-                    // Inside your try block
-                        // set your string variable to each array element in your char[] to .ToString()
-                        // Now, using int.Parse, parse your string variable and store in an int variable
-                        // Then add each int to your list
-                
+                try
+                {
+                    str = character.ToString();
+                    var number = int.Parse(str);
+                    numbers.Add(number);
+                }
+                catch
+                {
+                    Console.WriteLine($"Unable to Parse '{character}'");
+                }
+            }
+
+            foreach (var num in numbers) 
+            {
+                Console.WriteLine(num);
+            }
+
+            // Inside your try block
+            // set your string variable to each array element in your char[] to .ToString()
+            // Now, using int.Parse, parse your string variable and store in an int variable
+            // Then add each int to your list
+
                 // catch your Exception:
                 // in the scope of your catch you can use the following, 
-                
-                    //Console.WriteLine($"Unable to Parse '{character}'"); //character will be the name of each item in your collection
-                
-            
 
-            //foreach (var num in numbers)
-            //{
-            //    Console.WriteLine(num);
-            //}
+                //Console.WriteLine($"Unable to Parse '{character}'"); //character will be the name of each item in your collection
+
+
+
+                //foreach (var num in numbers)
+                //{
+                //    Console.WriteLine(num);
+                //}
         }
     }
 }
