@@ -37,9 +37,9 @@ namespace ExceptionHandlingExercise
                     var number = int.Parse(str);
                     numbers.Add(number);
                 }
-                catch
+                catch (System.FormatException e)
                 {
-                    Console.WriteLine($"Unable to Parse '{character}'");
+                    Console.WriteLine($"Unable to Parse '{character}. {e.Message}'");
                 }
             }
 
