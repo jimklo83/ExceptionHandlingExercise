@@ -39,7 +39,7 @@ namespace ExceptionHandlingExercise
                 }
                 catch (System.FormatException e)
                 {
-                    Console.WriteLine($"Unable to Parse '{character}. {e.Message}'");
+                    Console.WriteLine($"Unable to Parse '{character}'. {e.Message}");
                 }
             }
 
